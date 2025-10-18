@@ -123,7 +123,7 @@ const App: React.FC = () => {
       </section>
 
       <section id="contact" data-aos="fade-up">
-  <h2>Contact Me</h2>
+  <h2>Let’s Connect</h2>
   <div className="contact-container">
     <a href="mailto:mohanabhavani354@gmail.com" className="contact-item">
       <FaEnvelope className="contact-icon" />
@@ -136,6 +136,7 @@ const App: React.FC = () => {
     </a>
   </div>
 </section>
+
 
 
       {/* Footer */}
