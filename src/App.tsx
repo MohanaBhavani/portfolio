@@ -38,25 +38,32 @@ const App: React.FC = () => {
       {/* Hero Section */}
       <header className="hero">
         <div className="hero-content">
-          <div className="hero-images">
-            <img
-              src="/profile.jpg"
-              alt="Mohana Bhavani"
-              className="profile-jpg"
-            />
+          <div className="hero-image">
+            <img src="/profile.jpg" alt="Mohana Bhavani" className="profile-jpg" />
           </div>
           <div className="hero-text">
             <h2 className="intro-text">Hi, I'm</h2>
             <h1 className="name-text">Mohana Bhavani</h1>
             <p className="student-text">Student at University of South Florida</p>
+            <a href="#contact" className="contact-info-btn">Contact Info</a>
             <div className="contact-bar">
-              <a href="mailto:mohanabhavani354@gmail.com" className="contact-item">
-                <FaEnvelope className="contact-icon" />
-              </a>
-              <a href="https://www.linkedin.com/in/mohana-bhavani" className="contact-item">
+              <a
+                href="https://www.linkedin.com/in/mohanabhavani-tatikonda-6737b8329"
+                className="contact-item"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+              >
                 <FaLinkedin className="contact-icon" />
               </a>
-              <a href="https://github.com/yourprofile" className="contact-item">
+
+              <a
+                href="https://github.com/MohanaBhavani"
+                className="contact-item"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub"
+              >
                 <FaGithub className="contact-icon" />
               </a>
             </div>
@@ -68,7 +75,7 @@ const App: React.FC = () => {
       <section id="about" data-aos="fade-up">
         <h2>About Me</h2>
         <p>
-          I am a dedicated data intelligence professional with a strong background in software development, AI, and machine learning. I am currently pursuing my Master of Science in Data Intelligence at the University of South Florida, where I am enhancing my expertise in algorithms, data analysis, and system architecture.
+          I am a passionate Data Intelligence professional with a strong foundation in software engineering, machine learning, and full-stack web development. Currently pursuing my Master’s in Data Intelligence at the University of South Florida, I am expanding my expertise in data analytics, artificial intelligence, and scalable system design. My experience as an AI Trainee at IASSIST Innovation Labs allowed me to develop and optimize Python-based automation pipelines, build machine learning models, and contribute to real-world AI solutions across healthcare and insurance domains. Skilled in Java, Python, React, Node.js, and SQL/NoSQL databases, I thrive in dynamic environments that demand problem-solving, innovation, and cross-functional collaboration. My long-term goal is to apply intelligent systems to transform data into impactful business insights and technological advancements.
         </p>
         <div className="about-container">
           <div className="about-box">
@@ -78,7 +85,7 @@ const App: React.FC = () => {
           </div>
           <div className="about-box">
             <h3><FaBriefcase className="box-icon" /> Experience</h3>
-            <p>AI Trainee / Tester – IASSIST Innovation Labs (Jan 2023 – Dec 2023)</p>
+            <p>AI Trainee / Tester</p>
           </div>
         </div>
       </section>
@@ -90,9 +97,24 @@ const App: React.FC = () => {
           <div className="experience-card">
             <h3>AI Trainee / Tester – IASSIST Innovation Labs</h3>
             <p>Jan 2023 – Dec 2023</p>
-            <p>
-              Developed AI-driven automation and data solutions to optimize healthcare claim processing for an insurance client. Analyzed hospital billing data to detect overcharges, built machine learning models to classify and reconcile claims, and curated high-quality datasets.
-            </p>
+            <ul className="experience-list">
+              <li>
+                Developed <strong>AI-driven automation solutions</strong> to streamline and optimize
+                <strong> healthcare claim processing</strong> for an insurance client.
+              </li>
+              <li>
+                <strong>Analyzed large-scale hospital billing data</strong> to identify
+                <strong> overcharges and anomalies</strong>, improving claim accuracy and efficiency.
+              </li>
+              <li>
+                Designed and trained <strong>machine learning models</strong> to classify and reconcile
+                medical claims with high precision.
+              </li>
+              <li>
+                Curated and preprocessed <strong>high-quality datasets</strong>, ensuring model reliability
+                and consistent performance across diverse data sources.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -101,43 +123,96 @@ const App: React.FC = () => {
       <section id="projects" data-aos="fade-up">
         <h2>Projects</h2>
         <div className="projects-container">
+          {/* Image Segmentation */}
           <div className="project-card">
-            <h3>Collaborative Code Editor with Compiler</h3>
-            <p>
-              Built a collaborative platform with code editor, chat, and video call features. Integrated Google authentication and MongoDB database for real-time collaboration.
-            </p>
+            <img
+  className="project-image"
+  src="/assets/image-segmentation.jpg"
+  alt="Image segmentation U-Net results"
+  loading="lazy"
+/>
+            <h3>Image Segmentation</h3>
+            <ul>
+              <li>Trained <strong>U-Net</strong> model for semantic segmentation of driving scenes.</li>
+              <li>Used <strong>CameraRGB</strong> and <strong>CameraMask</strong> datasets with 1,080 images.</li>
+              <li>Applied <strong>encoder–decoder architecture</strong> with skip connections.</li>
+              <li>Built and trained using <strong>TensorFlow</strong> and <strong>Keras</strong>.</li>
+              <li>Achieved <strong>93.3% accuracy</strong>, outperforming FCN.</li>
+            </ul>
+            <div className="project-actions">
+              <a className="btn" href="https://github.com/MohanaBhavani/ImageSegmentation" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
           </div>
+
+          {/* Student Outcome Prediction (OULAD) */}
           <div className="project-card">
-            <h3>Covid Analysis Dashboard Using Python</h3>
-            <p>
-              Designed an interactive dashboard using Python (pandas, numpy, streamlit) and MySQL to analyze COVID-19 data across countries with visualizations and tables.
-            </p>
+           <img
+  className="project-image"
+  src="/assets/oulad-student-outcome.jpg"
+  alt="Student outcome prediction charts"
+  loading="lazy"
+/>
+            <h3>Student Outcome Prediction</h3>
+            <ul>
+              <li>Trained <strong>ML models</strong> on the <strong>OULAD</strong> dataset.</li>
+              <li>Used <strong>activity, demographics, and assessments</strong> to predict outcomes.</li>
+              <li>Compared <strong>Logistic Regression</strong>, <strong>Random Forest</strong>, <strong>SVM</strong>.</li>
+              <li>Built and evaluated in <strong>Python</strong> with <strong>Scikit-learn</strong>.</li>
+              <li>Achieved <strong>high prediction accuracy</strong> identifying at-risk students.</li>
+            </ul>
+            <div className="project-actions">
+              <a className="btn" href="https://github.com/MohanaBhavani/student-success-prediction" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
           </div>
+
+          {/* Loan Risk Prediction */}
           <div className="project-card">
-            <h3>Bank Loan Risk Assessment</h3>
-            <p>
-              Developed a machine learning system to predict borrower risk for bank loans using a dataset of over 150,000 applications with 190+ features. Employed Random Forest, Logistic Regression, SVM, XGBoost, CatBoost, and LightGBM. Applied SMOTE, stratified cross-validation, and feature engineering to improve model performance.
-            </p>
+            <img
+  className="project-image"
+  src="/assets/loan-risk-ml.jpg"
+  alt="Loan risk ML model visual"
+  loading="lazy"
+/>
+            <h3>Loan Risk Prediction</h3>
+            <ul>
+              <li>Developed a <strong>machine learning system</strong> to predict borrower risk for bank loans.</li>
+              <li>Dataset of <strong>150,000+ applications</strong> and <strong>190+ features</strong>.</li>
+              <li>Models: <strong>Random Forest</strong>, <strong>Logistic Regression</strong>, <strong>SVM</strong>, <strong>XGBoost</strong>, <strong>CatBoost</strong>, <strong>LightGBM</strong>.</li>
+              <li>Applied <strong>SMOTE</strong>, <strong>stratified CV</strong>, and <strong>feature engineering</strong>.</li>
+              <li>Built with <strong>Python</strong> and the <strong>Scikit-learn</strong> ecosystem.</li>
+            </ul>
+            <div className="project-actions">
+              <a className="btn" href="https://github.com/MohanaBhavani/Bank-Loan-Risk-Assessment" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Contact */}
       <section id="contact" data-aos="fade-up">
-  <h2>Let’s Connect</h2>
-  <div className="contact-container">
-    <a href="mailto:mohanabhavani354@gmail.com" className="contact-item">
-      <FaEnvelope className="contact-icon" />
-    </a>
-    <a href="https://linkedin.com/in/mohana-bhavani" target="_blank" rel="noopener noreferrer" className="contact-item">
-      <FaLinkedin className="contact-icon" />
-    </a>
-    <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="contact-item">
-      <FaGithub className="contact-icon" />
-    </a>
-  </div>
-</section>
+        <h2>Let’s Connect</h2>
+        <div className="contact-container">
+          <a
+            href="mailto:mohanabhavani354@gmail.com"
+            className="contact-item contact-with-text"
+            title="Email"
+          >
+            <FaEnvelope className="contact-icon" />
+            <span className="contact-text">mohanabhavani354@gmail.com</span>
+          </a>
 
-
+          <a
+            href="https://linkedin.com/in/mohana-bhavani"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-item contact-with-text"
+            title="LinkedIn"
+          >
+            <FaLinkedin className="contact-icon" />
+            <span className="contact-text">LinkedIn</span>
+          </a>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="footer">

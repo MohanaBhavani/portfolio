@@ -57,6 +57,24 @@ body {
   color: #555;
 }
 
+/* ===== GitHub Tab (Navbar Button Style) ===== */
+.nav-github-btn {
+  background-color: #ffffff;      /* white background */
+  color: #000000;                 /* black text */
+  border: 2px solid #000000;      /* clean border */
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-github-btn:hover {
+  background-color: #f2f0f0;
+  color: #060606;
+  transform: translateY(-2px);
+}
+
+
 .hamburger {
   display: none;
   font-size: 1.8em;
@@ -70,24 +88,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 0; /* reduce vertical padding */
+  padding: 60px 0;
 }
-
 
 .hero-content {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 40px; /* add more space between image and text */
+  justify-content: center;
+  gap: 40px;
   max-width: 900px;
   width: 100%;
+  margin-top: 40px;
+  flex-direction: row; /* IMAGE and TEXT side by side */
+  text-align: left;    /* Align text left when side by side */
 }
-
 
 .hero-images {
   display: flex;
-  flex-direction: column; /* stack images vertically */
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -98,17 +117,6 @@ body {
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-
-
-
-.secondary-img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-
 
 .hero-text {
   text-align: left;
@@ -123,6 +131,24 @@ body {
   font-size: 1.2em;
   margin: 0 0 20px 0;
   color: #555555;
+}
+
+/* ===== Contact Info Button in Hero ===== */
+.contact-info-btn {
+  display: inline-block;
+  margin: 10px 0 20px;
+  padding: 10px 20px;
+  background-color: #050505;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-info-btn:hover {
+  background-color: #0e0e0d;
+  transform: translateY(-2px);
 }
 
 .contact-bar {
@@ -142,7 +168,7 @@ body {
 }
 
 .contact-item:hover .contact-icon {
-  color: #4f46e5;
+  color: #090909;
 }
 
 /* Sections */
@@ -175,6 +201,20 @@ h2 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+/* ===== Project Images ===== */
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.project-image:hover {
+  transform: scale(1.03);
+}
+
 
 .project-card:hover, .experience-card:hover {
   transform: translateY(-5px);
@@ -191,6 +231,102 @@ h2 {
   line-height: 1.5;
 }
 
+/* ===== Project Bullet List (applies to all project cards) ===== */
+.project-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+  text-align: left;         /* keeps bullets tidy */
+}
+
+.project-card li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+  font-size: 0.95em;
+  color: #333;
+}
+
+/* ===== Project card image & actions ===== */
+.project-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.project-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  background: #000;
+}
+
+.btn-secondary {
+  background: #f0f0f0;
+  color: #111;
+}
+
+.btn-secondary:hover {
+  background: #e6e6e6;
+}
+
+/* OPTIONAL: checkmark bullets instead of default discs */
+.project-card--checks ul {
+  list-style: none;
+  padding-left: 0;
+}
+.project-card--checks li {
+  position: relative;
+  padding-left: 26px;
+}
+.project-card--checks li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+/* ===== Experience List Style ===== */
+.experience-list {
+  list-style-type: disc;
+  text-align: left;
+  margin-top: 10px;
+  padding-left: 25px;
+  line-height: 1.6;
+  color: #333;
+  font-size: 1em;
+}
+
+.experience-list li {
+  margin-bottom: 10px;
+}
+
+.experience-list strong {
+  font-weight: 600;
+  color: #000;
+}
+
 /* About Section Text & Boxes */
 #about {
   width: 100%;
@@ -198,12 +334,6 @@ h2 {
   margin: 40px auto;
   text-align: center;
   padding: 0 20px;
-}
-
-#about h2 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
-  font-weight: 700;
 }
 
 .about-container {
@@ -217,7 +347,7 @@ h2 {
   background-color: #f7f7f7;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   width: 45%;
   min-width: 280px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -225,7 +355,7 @@ h2 {
 
 .about-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .about-box h3 {
@@ -248,6 +378,39 @@ h2 {
   gap: 30px;
   margin-top: 20px;
 }
+
+/* ===== Contact Item with Text (Email & LinkedIn) ===== */
+.contact-with-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #111;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-with-text:hover {
+  color: #020202;
+}
+
+.contact-with-text,
+.contact-with-text:visited {
+  color: #111 !important;
+}
+
+.contact-icon {
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+
+.contact-text {
+  display: inline-block;
+  font-weight: 500;
+  vertical-align: middle;
+  color: #111;
+}
+
 /* Footer */
 .footer {
   text-align: center;
@@ -271,7 +434,7 @@ h2 {
 }
 
 .footer-links a:hover {
-  color: #4f46e5;
+  color: #0e0e0e;
 }
 
 /* Responsive */
@@ -289,7 +452,7 @@ h2 {
     width: 220px;
     padding: 16px;
     display: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(203, 197, 197, 0.05);
     border-radius: 6px;
   }
 
@@ -297,8 +460,9 @@ h2 {
     display: flex;
   }
 
+  /* Hero Section responsive */
   .hero-content {
-    flex-direction: column;
+    flex-direction: column; /* Stack on small screens */
     text-align: center;
     gap: 20px;
   }
@@ -335,17 +499,28 @@ h2 {
   vertical-align: middle;
 }
 
-/* ===== Additional Hero with Two Images ===== */
-.hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-   margin-top: 40px; /* remove extra spacing */
-}
-
-.hero-images-two {
+/* ===== GLOBAL CENTERING FIX ===== */
+.App {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Ensure every section is nicely centered */
+section {
+  max-width: 1000px;
+  width: 100%;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Center Hero Section too */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
