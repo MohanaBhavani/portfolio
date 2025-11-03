@@ -80,7 +80,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 0;
+  padding: 80px 20px;
+  width: 100%;
+  min-height: 70vh;
+  background-color: #ffffff;
 }
 
 .hero-content {
@@ -88,27 +91,51 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  max-width: 900px;
+  gap: 60px;
+  max-width: 1100px;
   width: 100%;
-  margin-top: 40px;
-  flex-direction: row;
-  text-align: left;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.hero-images { display: flex; flex-direction: column; gap: 20px; }
+.hero-images { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 20px;
+  flex: 0 0 auto;
+}
 
 .profile-jpg {
   width: 300px;
-  height: auto;
+  height: 300px;
   border-radius: 20px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.hero-text { text-align: left; }
-.hero-text h1 { font-size: 3em; margin: 0 0 10px 0; }
-.student-text { font-size: 1.2em; margin: 0 0 20px 0; color: #555555; }
+.hero-text { 
+  flex: 1 1 400px;
+  text-align: left;
+  max-width: 600px;
+}
+
+.intro-text {
+  font-size: 1.5em;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+}
+
+.hero-text h1,
+.name-text { 
+  font-size: 3em; 
+  margin: 0 0 10px 0; 
+}
+
+.student-text { 
+  font-size: 1.2em; 
+  margin: 0 0 20px 0; 
+  color: #555555; 
+}
 
 /* ===== Contact Info Button in Hero ===== */
 .contact-info-btn {
@@ -122,12 +149,30 @@ body {
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.contact-info-btn:hover { background-color: #0e0e0d; transform: translateY(-2px); }
+.contact-info-btn:hover { 
+  background-color: #0e0e0d; 
+  transform: translateY(-2px); 
+}
 
-.contact-bar { display: flex; gap: 20px; justify-content: flex-start; }
-.contact-icon { font-size: 2rem; color: #111; transition: color 0.3s ease; }
-.contact-item { text-decoration: none; }
-.contact-item:hover .contact-icon { color: #090909; }
+.contact-bar { 
+  display: flex; 
+  gap: 20px; 
+  justify-content: flex-start; 
+}
+
+.contact-icon { 
+  font-size: 2rem; 
+  color: #111; 
+  transition: color 0.3s ease; 
+}
+
+.contact-item { 
+  text-decoration: none; 
+}
+
+.contact-item:hover .contact-icon { 
+  color: #090909; 
+}
 
 /* ================ GLOBAL SECTIONS ================ */
 section {
@@ -199,7 +244,7 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
   border: 2px solid #dcdcdc;
   border-radius: 22px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
-  width: 900px;                 /* ⬅️ Increased length */
+  width: 900px;
   padding: 40px 50px;
   text-align: center;
   font-size: 1.05rem;
@@ -232,7 +277,7 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
   line-height: 1.8;
   color: #333;
   margin: 0 auto;
-  max-width: 820px;             /* keeps bullet text inside boundaries */
+  max-width: 820px;
   list-style-position: inside;
 }
 
@@ -251,13 +296,6 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
   }
 }
 
-
-/* Responsive fix for smalle*
-
-
-
-
-
 /* ================ PROJECTS SECTION (PERFECTLY CENTERED) ================ */
 #projects {
   display: flex;
@@ -268,21 +306,21 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
   text-align: center;
 }
 
-/* Centered container that doesn’t touch edges */
+/* Centered container that doesn't touch edges */
 .projects-container {
   display: flex;
-  justify-content: center;     /* centers horizontally */
+  justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap;             /* allows multiple rows */
-  gap: 40px;                   /* spacing between tabs */
-  max-width: 1200px;           /* keeps the whole section centered */
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 /* Card styling */
 .project-card {
-  flex: 0 1 280px;             /* fixed card width */
+  flex: 0 1 280px;
   background: #fff;
   border: 2px solid #dcdcdc;
   border-radius: 28px;
@@ -348,17 +386,12 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
   padding: 10px 18px;
   font-weight: 700;
   transition: all 0.25s ease;
+  text-decoration: none;
 }
 
 .project-actions .btn:hover {
   background: #111;
   color: #fff;
-}
-
-
-/* At very large widths, show exactly 4 per row */
-@media (min-width: 1200px) {
-  .projects-container { grid-template-columns: repeat(4, 280px); }
 }
 
 /* ================ CONTACT ================ */
@@ -368,6 +401,7 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
   align-items: center;
   gap: 30px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .contact-with-text {
@@ -396,6 +430,7 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
   justify-content: center;
   gap: 30px;
   margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 .footer-links a {
   text-decoration: none;
@@ -408,6 +443,7 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
 /* ================ RESPONSIVE ================ */
 @media (max-width: 768px) {
   .hamburger { display: block; }
+  
   .nav-links {
     position: absolute;
     top: 60px;
@@ -422,10 +458,77 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
   }
   .nav-links.show { display: flex; }
 
-  .hero-content { flex-direction: column; text-align: center; gap: 20px; }
-  .hero-text { text-align: center; }
-  .hero-text h1 { font-size: 2.2em; }
-  .hero-text p { font-size: 1em; }
+  .hero {
+    padding: 40px 20px;
+    min-height: auto;
+  }
 
-  .about-container { grid-template-columns: 1fr; }
+  .hero-content { 
+    flex-direction: column; 
+    text-align: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .hero-images {
+    flex: none;
+  }
+
+  .hero-text { 
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-text h1,
+  .name-text { 
+    font-size: 2.2em; 
+  }
+
+  .intro-text {
+    font-size: 1.2em;
+  }
+
+  .hero-text p,
+  .student-text { 
+    font-size: 1em; 
+  }
+
+  .profile-jpg { 
+    width: 220px;
+    height: 220px;
+  }
+
+  .contact-bar { 
+    justify-content: center; 
+  }
+
+  .about-container { 
+    grid-template-columns: 1fr; 
+  }
+
+  .project-card {
+    flex: 0 1 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1,
+  .name-text { 
+    font-size: 1.8em; 
+  }
+
+  .intro-text {
+    font-size: 1em;
+  }
+
+  .profile-jpg { 
+    width: 180px;
+    height: 180px;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
 }

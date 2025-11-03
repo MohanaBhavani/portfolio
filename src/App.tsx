@@ -18,14 +18,16 @@ const App: React.FC = () => {
         <div className="nav-container">
           <h2 className="logo">Mohana Bhavani</h2>
           <button
-            className="hamburger"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isOpen}
-            aria-controls="primary-navigation"
-          >
-            ☰
-          </button>
+  type="button"                // ADD THIS
+  className="hamburger"
+  onClick={() => setIsOpen(!isOpen)}
+  aria-label={isOpen ? "Close menu" : "Open menu"}
+  aria-expanded={isOpen}
+  aria-controls="primary-navigation"
+>
+  ☰
+</button>
+
           <ul id="primary-navigation" className={`nav-links ${isOpen ? "show" : ""}`}>
             <li><a href="#about" onClick={() => setIsOpen(false)}>About</a></li>
             <li><a href="#experience" onClick={() => setIsOpen(false)}>Experience</a></li>
