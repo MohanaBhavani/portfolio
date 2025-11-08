@@ -192,7 +192,7 @@ const App: React.FC = () => {
 
       {/* Contact */}
       <section id="contact" data-aos="fade-up">
-        <h2>Let’s Connect</h2>
+        <h2 className= "contact-container">Let’s Connect</h2>
         <div className="contact-container">
           <a
             href="mailto:mohanabhavani354@gmail.com"

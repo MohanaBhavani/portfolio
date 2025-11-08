@@ -80,7 +80,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 20px;
+  /* padding: 80px 20px; */
+  padding-left: 350px;
   width: 100%;
   min-height: 70vh;
   background-color: #ffffff;
@@ -191,6 +192,7 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
   margin: 40px auto;
   text-align: center;
   padding: 0 20px;
+  padding-left: 350px;
 }
 
 .about-container {
@@ -224,6 +226,7 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
   text-align: center;
   width: 100%;
   margin-top: 40px;
+  padding-left: 350px;
 }
 
 /* Center the row of experience cards */
@@ -279,6 +282,7 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
   margin: 0 auto;
   max-width: 820px;
   list-style-position: inside;
+  padding-left: 40px;
 }
 
 .experience-list li {
@@ -298,12 +302,13 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
 
 /* ================ PROJECTS SECTION (PERFECTLY CENTERED) ================ */
 #projects {
-  display: flex;
+  display: block;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   text-align: center;
+  padding-left: 220px;
 }
 
 /* Centered container that doesn't touch edges */
@@ -402,6 +407,7 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
   gap: 30px;
   margin-top: 20px;
   flex-wrap: wrap;
+  padding-left: 300px;
 }
 
 .contact-with-text {
@@ -424,6 +430,7 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
   padding: 20px;
   margin-top: 50px;
   font-size: 0.9em;
+  padding-left: 300px;
 }
 .footer-links {
   display: flex;
