@@ -204,7 +204,7 @@ const App: React.FC = () => {
           </a>
 
           <a
-            href="https://linkedin.com/in/mohana-bhavani"
+            href="https://www.linkedin.com/in/mohanabhavani-tatikonda-6737b8329"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-item contact-with-text"

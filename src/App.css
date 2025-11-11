@@ -539,3 +539,55 @@ h2 { font-size: 2.5em; margin-bottom: 30px; font-weight: 700; }
     font-size: 2em;
   }
 }
+/* === Mobile layout fixes (add at the end, do not remove anything above) === */
+@media (max-width: 768px) {
+
+  /* Remove huge left padding on sections for mobile */
+  #about,
+  #experience,
+  #projects,
+  .contact-container,
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* Make experience card fit nicely */
+  #experience .experience-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 24px 18px;
+  }
+
+  /* Center projects section */
+  #projects .projects-container {
+    justify-content: center;
+    padding: 0;
+  }
+
+  /* Contact icons centered on mobile */
+  .contact-container {
+    justify-content: center;
+  }
+
+  /* Footer centered without horizontal scroll */
+  .footer {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Slightly tighter padding on very small screens */
+  #about,
+  #experience,
+  #projects,
+  .contact-container,
+  .footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
